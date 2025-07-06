@@ -23,6 +23,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ec2-user/app
+            cd /home/ec2-user/express-app
             git pull origin main
-            pm2 restart all
+            npm install
+            nohup node src/index.js > app.log 2>&1 &
