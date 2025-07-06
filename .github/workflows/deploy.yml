@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        host: ["ec2-user@65.1.145.241"]
+        host: ["65.1.145.241"]
 
     steps:
       - name: Checkout code
